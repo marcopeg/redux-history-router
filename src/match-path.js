@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 // import pathToRegexp from "path-to-regexp";
-const pathToRegexp = require('path-to-regexp');
+const pathToRegexp = require('path-to-regexp')
 
 const patternCache = {};
 const cacheLimit = 10000;
@@ -41,8 +41,8 @@ const matchPath = (pathname, options = {}, parent) => {
     if (!match) return null;
 
     // const [url, ...values] = match;
-    const url = match.shift();
-    const values = match;
+    const url = match.shift()
+    const values = match
     const isExact = pathname === url;
 
     if (exact && !isExact) return null;

@@ -1,10 +1,16 @@
 {
   "name": "redux-history-router",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Aubscribe to route changes and dispatch redux events",
   "main": "index.js",
   "scripts": {
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2017"
+    ]
   },
   "repository": {
     "type": "git",
@@ -18,5 +24,9 @@
   "homepage": "https://github.com/marcopeg/redux-history-router#readme",
   "dependencies": {
     "path-to-regexp": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2017": "^6.24.1"
   }
 }
