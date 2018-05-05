@@ -1,6 +1,6 @@
 {
   "name": "redux-history-router",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Aubscribe to route changes and dispatch redux events",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "babel": {
     "presets": [
+      "es2015",
       "es2017"
     ]
   },
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2017": "^6.24.1"
   }
 }
