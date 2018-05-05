@@ -1,6 +1,6 @@
 {
   "name": "redux-history-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aubscribe to route changes and dispatch redux events",
   "main": "index.js",
   "scripts": {
