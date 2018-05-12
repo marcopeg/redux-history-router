@@ -9,7 +9,7 @@ const matchPath = require('./match-path')
  * }
  */
 
-const createHistoryRouter = (routes, config = {}) => location => (dispatch) => {
+const createHistoryRouter = (routes, ctx = null, config = {}) => location => (dispatch) => {
     if (!location) {
         return
     }
@@ -32,7 +32,7 @@ const createHistoryRouter = (routes, config = {}) => location => (dispatch) => {
 
         applicableRoutes.forEach(({ action, match }) => {
             if (action) {
-                dispatch(action(match.params, match))
+                dispatch(action(match.params, match, ctx))
                 dispatch({
                     type: '@@route::fired',
                     payload: Object.assign({}, location, {
